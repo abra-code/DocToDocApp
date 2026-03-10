@@ -1,0 +1,277 @@
+{
+  "type": "NavigationSplitView",
+  "id": 100,
+  "properties": {
+    "columnVisibility": "all",
+    "style": "balanced",
+    "frame": {
+      "minWidth": 800,
+      "minHeight": 520
+    },
+    "padding": {
+      "top": 4
+    }
+  },
+  "sidebar": {
+    "type": "VStack",
+    "properties": {
+      "spacing": 8,
+      "navigationSplitViewColumnWidth": {
+        "min": 220,
+        "ideal": 320,
+        "max": 360
+      }
+    },
+    "children": [
+      {
+        "type": "Table",
+        "id": 10,
+        "properties": {
+          "columns": ["Document"],
+          "widths": [280],
+          "actionID": "pandoc.files.selection.changed",
+          "doubleClickActionID": "pandoc.files.double.click"
+        }
+      },
+      {
+        "type": "HStack",
+        "properties": {
+          "spacing": 0
+        },
+        "children": [
+          {
+            "type": "Button",
+            "id": 101,
+            "properties": {
+              "systemImage": "plus.circle",
+              "imageScale": "large",
+              "buttonStyle": "plain",
+              "actionID": "pandoc.add.files",
+              "frame": {
+                "width": 32,
+                "height": 32
+              }
+            }
+          },
+          {
+            "type": "Button",
+            "id": 102,
+            "properties": {
+              "systemImage": "minus.circle",
+              "imageScale": "large",
+              "buttonStyle": "plain",
+              "actionID": "pandoc.remove.selected",
+              "disabled": true,
+              "frame": {
+                "width": 32,
+                "height": 32
+              }
+            }
+          },
+          {
+            "type": "Divider",
+            "properties": {
+              "padding": {
+                "top": 0,
+                "leading": 8,
+                "bottom": 0,
+                "trailing": 8
+              },
+              "frame": {
+                "height": 16
+              }
+            }
+          },
+          {
+            "type": "Button",
+            "id": 105,
+            "properties": {
+              "systemImage": "eye",
+              "imageScale": "medium",
+              "buttonStyle": "plain",
+              "actionID": "pandoc.quicklook",
+              "disabled": true,
+              "frame": {
+                "width": 32,
+                "height": 32
+              }
+            }
+          },
+          {
+            "type": "Button",
+            "id": 104,
+            "properties": {
+              "systemImage": "finder",
+              "imageScale": "medium",
+              "buttonStyle": "plain",
+              "actionID": "pandoc.reveal.in.finder",
+              "disabled": true,
+              "frame": {
+                "width": 32,
+                "height": 32
+              }
+            }
+          },
+          {
+            "type": "Spacer"
+          },
+          {
+            "type": "Button",
+            "id": 103,
+            "properties": {
+              "systemImage": "trash.circle",
+              "imageScale": "large",
+              "buttonStyle": "plain",
+              "actionID": "pandoc.clear.all",
+              "frame": {
+                "width": 32,
+                "height": 32
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "detail": {
+    "type": "VStack",
+    "properties": {
+      "frame": {
+        "minWidth": 420,
+        "idealWidth": 460
+      },
+      "spacing": 16,
+      "padding": "default"
+    },
+    "children": [
+      {
+        "type": "GroupBox",
+        "properties": {
+          "title": "Info",
+          "frame": {
+            "minWidth": 400
+          }
+        },
+        "children": [
+          {
+            "type": "ScrollView",
+            "properties": {
+              "frame": {
+                "minWidth": 390,
+                "minHeight": 200
+              }
+            },
+            "content": {
+              "type": "Text",
+              "id": 12,
+              "properties": {
+                "text": "",
+                "frame": {
+                  "minWidth": 380
+                },
+                "foregroundStyle": "secondary"
+              }
+            }
+          },
+          { "type": "Divider", "properties": { "opacity": 0, "frame": { "height": 0 } } }
+        ]
+      },
+      {
+        "type": "GroupBox",
+        "properties": {
+          "title": "Conversion Options",
+          "frame": {
+            "minWidth": 400
+          }
+        },
+        "children": [
+          {
+            "type": "VStack",
+            "properties": {
+              "spacing": 14,
+              "alignment": "leading",
+              "padding": "default",
+              "frame": {
+                "minWidth": 390,
+                "idealWidth": 390
+              }
+            },
+            "children": [
+              {
+                "type": "HStack",
+                "properties": {
+                  "spacing": 8
+                },
+                "children": [
+                  {
+                    "type": "Picker",
+                    "id": 13,
+                    "properties": {
+                      "title": "Output Format",
+                      "options": [],
+                      "actionID": "pandoc.format.changed"
+                    }
+                  },
+                  {
+                    "type": "Picker",
+                    "id": 17,
+                    "properties": {
+                      "pickerStyle": "menu",
+                      "options": [],
+                      "hidden": true
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Toggle",
+                "id": 14,
+                "properties": {
+                  "title": "Standalone document"
+                }
+              },
+              {
+                "type": "Toggle",
+                "id": 15,
+                "properties": {
+                  "title": "Table of contents",
+                  "actionID": "pandoc.toc.changed"
+                }
+              },
+              { "type": "Divider", "properties": { "opacity": 0, "frame": { "height": 0 } } }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Spacer"
+      },
+      {
+        "type": "HStack",
+        "properties": {
+          "spacing": 16
+        },
+        "children": [
+          {
+            "type": "Toggle",
+            "id": 16,
+            "properties": {
+              "title": "Overwrite existing files"
+            }
+          },
+          {
+            "type": "Spacer"
+          },
+          {
+            "type": "Button",
+            "properties": {
+              "title": "Convert",
+              "buttonStyle": "borderedProminent",
+              "actionID": "pandoc.start.batch"
+            }
+          }
+        ]
+     }
+    ]
+  }
+}

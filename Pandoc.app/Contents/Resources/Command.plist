@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN">
+<plist version="1.0">
+<dict>
+	<key>COMMAND_LIST</key>
+	<array>
+		<dict>
+			<key>NAME</key>
+			<string>Pandoc</string>
+			<key>ACTIVATION_MODE</key>
+			<string>act_file_or_folder</string>
+			<key>EXECUTION_MODE</key>
+			<string>exe_script_file</string>
+			<key>ACTIONUI_WINDOW</key>
+			<dict>
+				<key>JSON_NAME</key>
+				<string>Pandoc</string>
+				<key>INIT_SUBCOMMAND_ID</key>
+				<string>pandoc.init</string>
+				<key>END_CANCEL_SUBCOMMAND_ID</key>
+				<string>pandoc.cancel</string>
+				<key>IS_BLOCKING</key>
+				<false/>
+			</dict>
+			<key>MULTIPLE_OBJECT_SETTINGS</key>
+			<dict>
+				<key>PROCESSING_MODE</key>
+				<string>proc_together</string>
+				<key>SEPARATOR</key>
+				<string>\n</string>
+				<key>SORT_METHOD</key>
+				<string>sort_by_name</string>
+			</dict>
+			<key>REQUIRED_OMC_VERSION</key>
+			<string>5.0</string>
+			<key>REQUIRED_MAC_OS_MIN_VERSION</key>
+			<string>14.6</string>
+		</dict>
+
+		<dict>
+			<key>NAME</key>
+			<string>Pandoc</string>
+			<key>COMMAND_ID</key>
+			<string>pandoc.init</string>
+			<key>EXECUTION_MODE</key>
+			<string>exe_script_file</string>
+		</dict>
+
+		<dict>
+			<key>NAME</key>
+			<string>Pandoc</string>
+			<key>COMMAND_ID</key>
+			<string>pandoc.files.selection.changed</string>
+			<key>EXECUTION_MODE</key>
+			<string>exe_script_file</string>
+		</dict>
+
+		<dict>
+			<key>NAME</key>
+			<string>Pandoc</string>
+			<key>COMMAND_ID</key>
+			<string>pandoc.add.files</string>
+			<key>EXECUTION_MODE</key>
+			<string>exe_script_file</string>
+			<key>CHOOSE_OBJECT_DIALOG</key>
+			<dict>
+				<key>MESSAGE</key>
+				<string>Select documents to convert</string>
+				<key>ALLOW_MULTIPLE_ITEMS</key>
+				<true/>
+				<key>USE_PATH_CACHING</key>
+				<false/>
+			</dict>
+			<key>ENVIRONMENT_VARIABLES</key>
+			<dict>
+				<key>OMC_ACTIONUI_TABLE_10_COLUMN_2_ALL_ROWS</key>
+				<string></string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>NAME</key>
+			<string>Pandoc</string>
+			<key>COMMAND_ID</key>
+			<string>pandoc.remove.selected</string>
+			<key>EXECUTION_MODE</key>
+			<string>exe_script_file</string>
+			<key>ENVIRONMENT_VARIABLES</key>
+			<dict>
+				<key>OMC_ACTIONUI_TABLE_10_COLUMN_2_ALL_ROWS</key>
+				<string></string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>NAME</key>
+			<string>Pandoc</string>
+			<key>COMMAND_ID</key>
+			<string>pandoc.clear.all</string>
+			<key>EXECUTION_MODE</key>
+			<string>exe_script_file</string>
+		</dict>
+
+		<dict>
+			<key>NAME</key>
+			<string>Pandoc</string>
+			<key>COMMAND_ID</key>
+			<string>pandoc.start.batch</string>
+			<key>EXECUTION_MODE</key>
+			<string>exe_script_file</string>
+			<key>CHOOSE_FOLDER_DIALOG</key>
+			<dict>
+				<key>MESSAGE</key>
+				<string>Select destination folder</string>
+				<key>BUTTON_PROMPT</key>
+				<string>Convert</string>
+			</dict>
+			<key>ENVIRONMENT_VARIABLES</key>
+			<dict>
+				<key>OMC_ACTIONUI_TABLE_10_COLUMN_2_ALL_ROWS</key>
+				<string></string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>NAME</key>
+			<string>Pandoc</string>
+			<key>COMMAND_ID</key>
+			<string>pandoc.cancel</string>
+			<key>EXECUTION_MODE</key>
+			<string>exe_script_file</string>
+		</dict>
+
+		<dict>
+			<key>NAME</key>
+			<string>Pandoc</string>
+			<key>COMMAND_ID</key>
+			<string>pandoc.files.double.click</string>
+			<key>EXECUTION_MODE</key>
+			<string>exe_script_file</string>
+		</dict>
+
+		<dict>
+			<key>NAME</key>
+			<string>Pandoc</string>
+			<key>COMMAND_ID</key>
+			<string>pandoc.format.changed</string>
+			<key>EXECUTION_MODE</key>
+			<string>exe_script_file</string>
+		</dict>
+
+		<dict>
+			<key>NAME</key>
+			<string>Pandoc</string>
+			<key>COMMAND_ID</key>
+			<string>pandoc.toc.changed</string>
+			<key>EXECUTION_MODE</key>
+			<string>exe_script_file</string>
+		</dict>
+
+		<dict>
+			<key>NAME</key>
+			<string>Pandoc</string>
+			<key>COMMAND_ID</key>
+			<string>pandoc.reveal.in.finder</string>
+			<key>EXECUTION_MODE</key>
+			<string>exe_script_file</string>
+		</dict>
+
+		<dict>
+			<key>NAME</key>
+			<string>Pandoc</string>
+			<key>COMMAND_ID</key>
+			<string>pandoc.quicklook</string>
+			<key>EXECUTION_MODE</key>
+			<string>exe_script_file</string>
+		</dict>
+
+	</array>
+	<key>VERSION</key>
+	<integer>2</integer>
+</dict>
+</plist>
