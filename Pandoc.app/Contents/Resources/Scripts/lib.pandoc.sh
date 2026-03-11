@@ -59,7 +59,7 @@ input_format_extensions() {
     esac
 }
 
-# Build SUPPORTED_INPUT_EXTENSIONS for find command from pandoc --list-input-formats
+# Build filter arguments for find command from pandoc --list-input-formats
 build_supported_input_extensions() {
     local all_formats
     all_formats=$("$pandoc_bin" --list-input-formats 2>/dev/null)
@@ -93,7 +93,13 @@ build_supported_input_extensions() {
     echo "$result"
 }
 
-SUPPORTED_INPUT_EXTENSIONS=$(build_supported_input_extensions)
+# Lazy accessor - only calls build_supported_input_extensions on first use
+get_supported_input_extensions() {
+    if [ -z "$_SUPPORTED_INPUT_EXTENSIONS_CACHED" ]; then
+        _SUPPORTED_INPUT_EXTENSIONS_CACHED=$(build_supported_input_extensions)
+    fi
+    echo "$_SUPPORTED_INPUT_EXTENSIONS_CACHED"
+}
 
 # Formats to exclude from the output picker
 # pdf/beamer: require LaTeX or other PDF engine
@@ -294,11 +300,12 @@ add_files_to_table() {
     fi
 
     # Add new files/directories
+    local supported_exts=$(get_supported_input_extensions)
     while IFS= read -r file_path; do
         if [ -d "$file_path" ]; then
             # It's a directory - search recursively for supported files
             local all_files="$(/usr/bin/find "$file_path" -type f \
-                \( $SUPPORTED_INPUT_EXTENSIONS \) \
+                \( $supported_exts \) \
                 ! -path "*/.*" 2>/dev/null)"
 
             while IFS= read -r found_file; do
