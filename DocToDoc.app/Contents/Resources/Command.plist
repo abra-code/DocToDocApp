@@ -16,9 +16,9 @@
 				<key>JSON_NAME</key>
 				<string>DocToDoc</string>
 				<key>INIT_SUBCOMMAND_ID</key>
-				<string>pandoc.init</string>
+				<string>doctodoc.init</string>
 				<key>END_CANCEL_SUBCOMMAND_ID</key>
-				<string>pandoc.cancel</string>
+				<string>doctodoc.cancel</string>
 				<key>IS_BLOCKING</key>
 				<false/>
 			</dict>
@@ -41,7 +41,7 @@
 			<key>NAME</key>
 			<string>DocToDoc</string>
 			<key>COMMAND_ID</key>
-			<string>pandoc.init</string>
+			<string>doctodoc.init</string>
 			<key>EXECUTION_MODE</key>
 			<string>exe_script_file</string>
 		</dict>
@@ -50,7 +50,7 @@
 			<key>NAME</key>
 			<string>DocToDoc</string>
 			<key>COMMAND_ID</key>
-			<string>pandoc.files.selection.changed</string>
+			<string>doctodoc.files.selection.changed</string>
 			<key>EXECUTION_MODE</key>
 			<string>exe_script_file</string>
 		</dict>
@@ -59,7 +59,7 @@
 			<key>NAME</key>
 			<string>DocToDoc</string>
 			<key>COMMAND_ID</key>
-			<string>pandoc.add.files</string>
+			<string>doctodoc.add.files</string>
 			<key>EXECUTION_MODE</key>
 			<string>exe_script_file</string>
 			<key>CHOOSE_OBJECT_DIALOG</key>
@@ -82,7 +82,7 @@
 			<key>NAME</key>
 			<string>DocToDoc</string>
 			<key>COMMAND_ID</key>
-			<string>pandoc.remove.selected</string>
+			<string>doctodoc.remove.selected</string>
 			<key>EXECUTION_MODE</key>
 			<string>exe_script_file</string>
 			<key>ENVIRONMENT_VARIABLES</key>
@@ -96,7 +96,7 @@
 			<key>NAME</key>
 			<string>DocToDoc</string>
 			<key>COMMAND_ID</key>
-			<string>pandoc.clear.all</string>
+			<string>doctodoc.clear.all</string>
 			<key>EXECUTION_MODE</key>
 			<string>exe_script_file</string>
 		</dict>
@@ -105,7 +105,7 @@
 			<key>NAME</key>
 			<string>DocToDoc</string>
 			<key>COMMAND_ID</key>
-			<string>pandoc.start.batch</string>
+			<string>doctodoc.start.batch</string>
 			<key>EXECUTION_MODE</key>
 			<string>exe_script_file</string>
 			<key>CHOOSE_FOLDER_DIALOG</key>
@@ -126,7 +126,7 @@
 			<key>NAME</key>
 			<string>DocToDoc</string>
 			<key>COMMAND_ID</key>
-			<string>pandoc.cancel</string>
+			<string>doctodoc.cancel</string>
 			<key>EXECUTION_MODE</key>
 			<string>exe_script_file</string>
 		</dict>
@@ -135,7 +135,7 @@
 			<key>NAME</key>
 			<string>DocToDoc</string>
 			<key>COMMAND_ID</key>
-			<string>pandoc.files.double.click</string>
+			<string>doctodoc.files.double.click</string>
 			<key>EXECUTION_MODE</key>
 			<string>exe_script_file</string>
 		</dict>
@@ -144,7 +144,7 @@
 			<key>NAME</key>
 			<string>DocToDoc</string>
 			<key>COMMAND_ID</key>
-			<string>pandoc.format.changed</string>
+			<string>doctodoc.format.changed</string>
 			<key>EXECUTION_MODE</key>
 			<string>exe_script_file</string>
 		</dict>
@@ -153,7 +153,7 @@
 			<key>NAME</key>
 			<string>DocToDoc</string>
 			<key>COMMAND_ID</key>
-			<string>pandoc.toc.changed</string>
+			<string>doctodoc.toc.changed</string>
 			<key>EXECUTION_MODE</key>
 			<string>exe_script_file</string>
 		</dict>
@@ -162,7 +162,7 @@
 			<key>NAME</key>
 			<string>DocToDoc</string>
 			<key>COMMAND_ID</key>
-			<string>pandoc.reveal.in.finder</string>
+			<string>doctodoc.reveal.in.finder</string>
 			<key>EXECUTION_MODE</key>
 			<string>exe_script_file</string>
 		</dict>
@@ -171,7 +171,7 @@
 			<key>NAME</key>
 			<string>DocToDoc</string>
 			<key>COMMAND_ID</key>
-			<string>pandoc.quicklook</string>
+			<string>doctodoc.quicklook</string>
 			<key>EXECUTION_MODE</key>
 			<string>exe_script_file</string>
 		</dict>

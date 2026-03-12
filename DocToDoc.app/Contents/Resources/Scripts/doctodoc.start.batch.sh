@@ -1,10 +1,10 @@
 #!/bin/bash
-# pandoc.start.batch.sh - Run batch conversion using pandoc
+# doctodoc.start.batch.sh - Run batch conversion using pandoc
 
 # env | sort
 
 # Source shared library
-source "${OMC_APP_BUNDLE_PATH}/Contents/Resources/Scripts/lib.pandoc.sh"
+source "${OMC_APP_BUNDLE_PATH}/Contents/Resources/Scripts/lib.doctodoc.sh"
 
 # Get destination folder from CHOOSE_FOLDER_DIALOG
 destination="$OMC_DLG_CHOOSE_FOLDER_PATH"

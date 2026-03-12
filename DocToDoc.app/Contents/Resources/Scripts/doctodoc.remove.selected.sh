@@ -1,5 +1,5 @@
 #!/bin/bash
-# pandoc.remove.selected.sh - Remove selected file from table
+# doctodoc.remove.selected.sh - Remove selected file from table
 
 dialog_tool="$OMC_OMC_SUPPORT_PATH/omc_dialog_control"
 window_uuid="$OMC_ACTIONUI_WINDOW_UUID"
@@ -26,4 +26,4 @@ if [ -n "$selected_path" ]; then
 fi
 
 # Refresh controls based on current selection
-"$OMC_OMC_SUPPORT_PATH/omc_next_command" "${OMC_CURRENT_COMMAND_GUID}" "pandoc.files.selection.changed"
+"$OMC_OMC_SUPPORT_PATH/omc_next_command" "${OMC_CURRENT_COMMAND_GUID}" "doctodoc.files.selection.changed"

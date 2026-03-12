@@ -1,5 +1,5 @@
 #!/bin/bash
-# pandoc.files.selection.changed.sh - Handle file selection changes
+# doctodoc.files.selection.changed.sh - Handle file selection changes
 
 dialog_tool="$OMC_OMC_SUPPORT_PATH/omc_dialog_control"
 window_uuid="$OMC_ACTIONUI_WINDOW_UUID"

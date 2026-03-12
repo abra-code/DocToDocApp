@@ -1,8 +1,8 @@
 #!/bin/bash
-# pandoc.init.sh - Initialize the table and populate format picker
+# doctodoc.init.sh - Initialize the table and populate format picker
 
 # Source shared library
-source "${OMC_APP_BUNDLE_PATH}/Contents/Resources/Scripts/lib.pandoc.sh"
+source "${OMC_APP_BUNDLE_PATH}/Contents/Resources/Scripts/lib.doctodoc.sh"
 
 # Set up table columns
 "$dialog_tool" "$window_uuid" ${TABLE_ID} omc_table_set_columns "Documents"
@@ -10,6 +10,14 @@ source "${OMC_APP_BUNDLE_PATH}/Contents/Resources/Scripts/lib.pandoc.sh"
 
 # Clear any existing rows
 "$dialog_tool" "$window_uuid" ${TABLE_ID} omc_table_remove_all_rows
+
+# Hide TOC toggle - Plain Text does not support it
+"$dialog_tool" "$window_uuid" ${TOC_TOGGLE_ID} omc_set_property "hidden" "true"
+
+# If files were dropped on the app, add them
+if [ -n "$OMC_OBJ_PATH" ]; then
+    add_files_to_table "$OMC_OBJ_PATH"
+fi
 
 # Query pandoc for supported output formats
 all_formats=$("$pandoc_bin" --list-output-formats 2>/dev/null)
@@ -74,11 +82,3 @@ options_json="${options_json}]"
 # Set the format picker options dynamically and default to Plain Text
 "$dialog_tool" "$window_uuid" ${FORMAT_PICKER_ID} omc_set_property "options" "$options_json"
 "$dialog_tool" "$window_uuid" ${FORMAT_PICKER_ID} "plain"
-
-# Hide TOC toggle - Plain Text does not support it
-"$dialog_tool" "$window_uuid" ${TOC_TOGGLE_ID} omc_set_property "hidden" "true"
-
-# If files were dropped on the app, add them
-if [ -n "$OMC_OBJ_PATH" ]; then
-    add_files_to_table "$OMC_OBJ_PATH"
-fi

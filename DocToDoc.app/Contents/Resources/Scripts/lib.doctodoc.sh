@@ -1,5 +1,5 @@
 #!/bin/bash
-# lib.pandoc.sh - Shared functions and variables for DocToDoc
+# lib.doctodoc.sh - Shared functions and variables for DocToDoc
 
 # Control IDs
 TABLE_ID=10
@@ -118,7 +118,7 @@ get_output_flavor_options() {
     local format="$1"
     case "$format" in
         markdown)
-            echo '[{"title": "Pandoc", "tag": "markdown"},{"title": "GitHub (GFM)", "tag": "gfm"},{"title": "Strict (original)", "tag": "markdown_strict"},{"title": "CommonMark", "tag": "commonmark"},{"title": "CommonMark (Extended)", "tag": "commonmark_x"},{"title": "MultiMarkdown", "tag": "markdown_mmd"},{"title": "PHP Extra", "tag": "markdown_phpextra"},{"title": "Markua (Leanpub)", "tag": "markua"}]'
+            echo '[{"title": "Pandoc", "tag": "markdown"},{"title": "GitHub (GFM)", "tag": "gfm"},{"title": "Strict (original)", "tag": "markdown_strict"},{"title": "CommonMark", "tag": "commonmark"},{"title": "CommonMark Extended", "tag": "commonmark_x"},{"title": "MultiMarkdown", "tag": "markdown_mmd"},{"title": "PHP Extra", "tag": "markdown_phpextra"},{"title": "Markua (Leanpub)", "tag": "markua"}]'
             ;;
         html)
             echo '[{"title": "HTML 5", "tag": "html5"},{"title": "HTML 4", "tag": "html4"}]'
@@ -205,7 +205,7 @@ get_output_format_display_name() {
         biblatex)          echo "BibLaTeX (Bibliography)" ;;
         bibtex)            echo "BibTeX (Bibliography)" ;;
         commonmark)        echo "CommonMark" ;;
-        commonmark_x)      echo "CommonMark (Extended)" ;;
+        commonmark_x)      echo "CommonMark Extended" ;;
         djot)              echo "Djot" ;;
         docbook)           echo "DocBook (XML)" ;;
         docbook5)          echo "DocBook 5 (XML)" ;;

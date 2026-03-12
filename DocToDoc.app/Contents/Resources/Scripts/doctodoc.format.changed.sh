@@ -1,7 +1,7 @@
 #!/bin/bash
-# pandoc.format.changed.sh - Handle format picker change, show/hide flavor picker
+# doctodoc.format.changed.sh - Handle format picker change, show/hide flavor picker
 
-source "${OMC_APP_BUNDLE_PATH}/Contents/Resources/Scripts/lib.pandoc.sh"
+source "${OMC_APP_BUNDLE_PATH}/Contents/Resources/Scripts/lib.doctodoc.sh"
 
 output_format="$OMC_ACTIONUI_VIEW_13_VALUE"
 
