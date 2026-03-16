@@ -28,7 +28,7 @@
 	<key>CFBundleIconName</key>
 	<string>DocToDoc</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.abracode.pandoc</string>
+	<string>com.abracode.doctodoc</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
