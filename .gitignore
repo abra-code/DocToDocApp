@@ -5,3 +5,4 @@ DocToDoc.app/Contents/MacOS
 DocToDoc.app/Contents/_CodeSignature
 Private
 Tests/fixtures/
+DocToDoc.app/Contents/Library/Packages

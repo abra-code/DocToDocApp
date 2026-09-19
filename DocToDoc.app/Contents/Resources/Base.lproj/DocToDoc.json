@@ -27,6 +27,7 @@
         "type": "Table",
         "id": 10,
         "properties": {
+          "scrollContentBackground": "hidden",
           "columns": ["Document"],
           "widths": [280],
           "actionID": "doctodoc.files.selection.changed",
