@@ -50,6 +50,7 @@
               "imageScale": "large",
               "buttonStyle": "plain",
               "actionID": "doctodoc.add.files",
+              "help": "Add documents or folders",
               "frame": {
                 "width": 32,
                 "height": 32
@@ -64,6 +65,7 @@
               "imageScale": "large",
               "buttonStyle": "plain",
               "actionID": "doctodoc.remove.selected",
+              "help": "Remove the selected file from the list",
               "disabled": true,
               "frame": {
                 "width": 32,
@@ -93,6 +95,7 @@
               "imageScale": "medium",
               "buttonStyle": "plain",
               "actionID": "doctodoc.quicklook",
+              "help": "Preview the selected file with Quick Look",
               "disabled": true,
               "frame": {
                 "width": 32,
@@ -108,6 +111,7 @@
               "imageScale": "medium",
               "buttonStyle": "plain",
               "actionID": "doctodoc.reveal.in.finder",
+              "help": "Show the selected file in Finder",
               "disabled": true,
               "frame": {
                 "width": 32,
@@ -126,6 +130,7 @@
               "imageScale": "large",
               "buttonStyle": "plain",
               "actionID": "doctodoc.clear.all",
+              "help": "Remove all files from the list (the files themselves are not touched)",
               "frame": {
                 "width": 32,
                 "height": 32
